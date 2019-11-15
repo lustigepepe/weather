@@ -9,7 +9,7 @@ import {
 const DayForecast = _ => {
   const [detail, setDetail] = useState([]);
 
-  // very simple no subscription just pull one time all data,
+  // very simple no subscription, just pull one time all data,
   useEffect(() => {
     let forecastW = fetchWeather("forecast", "Berlin", "de");
     forecastW.then(data => {

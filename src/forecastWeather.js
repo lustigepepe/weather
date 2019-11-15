@@ -12,7 +12,6 @@ const ForecastWeather = () => {
   useEffect(() => {
     let forecastW = fetchWeather("forecast", "Berlin", "de");
     forecastW.then(data => {
-      console.log(data);
       var arr = [];
       var days = [
         "Sunday",
@@ -26,14 +25,14 @@ const ForecastWeather = () => {
 
       var day = new Date();
       var nextDay = new Date(day);
+      let j = 0;
       for (var i = 1; i < 4; i++) {
         nextDay.setDate(day.getDate() + i);
-        console.log("i", i);
         let month = nextDay.getMonth() + 1;
         var nextDayFormatted =
           nextDay.getFullYear() + "-" + month + "-" + nextDay.getDate();
 
-        for (let j = 0; j < data.list.length; j++) {
+        for (j; j < data.list.length; j++) {
           var nextSt = data.list[j].dt_txt.split(" ");
 
           if (nextSt[0] === nextDayFormatted) {
@@ -51,13 +50,13 @@ const ForecastWeather = () => {
               tempNight: _night.main.temp
             };
             arr.push(ob);
+            j += 7;
             break;
           }
         }
       }
       console.log(arr);
       setForecast(arr);
-     
     });
   }, []);
 
