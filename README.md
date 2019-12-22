@@ -1,23 +1,8 @@
-Frontend Coding Challenge Hopkins
+simply run:
 
-This challenge is about building a small interface that shows the weather of the next 3 days. As a user I would want to be able to use it to get the following information.
+npm i
 
-Requirements
-
-In the morning I want to check the wether for today to make sure, that I can dress accordingly
-Sometimes when I leave home for the weekend, I want to make sure, that it's not too windy, as I have sensitive plants on my balcony that I would have to put into my flat otherwise.
-I am usually checking the wheather on my phone, so it should be responsive
-Goal
-
-Come up with a nice interface that addresses the user's needs.
-
-Rules
-
-Use React as the sorrounding framework
-You are allowed to import other libraries for the interface such as MaterialUI, AntDesign, styled-components ...
-Please do not spend more than 1 or 2 hours for this challenge.
-Do all the editing within this glitch. This helps us to understand the steps you took better
-The API
+npm start
 
 Please use the openweathermap API for this challenge
 
